@@ -1,0 +1,25 @@
+{
+  "name": "greencode",
+  "version": "1.0.0",
+  "description": "CLI de gestao de logistica reversa de residuos eletroeletronicos - Atividade AV1",
+  "main": "dist/cli/main.js",
+  "bin": {
+    "greencode": "dist/cli/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli/main.js",
+    "dev": "ts-node src/cli/main.ts",
+    "test": "ts-node tests/jornada.ts",
+    "clean": "node -e \"for (const d of ['dist','data-teste']) require('fs').rmSync(d,{recursive:true,force:true})\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}
