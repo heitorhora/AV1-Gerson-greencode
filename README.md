@@ -143,13 +143,3 @@ greencode/
 Justificativa detalhada de cada escolha, trade-offs assumidos e cenários de
 falha testados: ver `docs/SEGURANCA.md`.
 
-## Próximas etapas previstas
-
-Conforme a proposta original, as próximas atividades do projeto devem
-incluir a integração com uma interface web e a migração da persistência para
-um banco de dados relacional. A arquitetura atual já isola essas
-preocupações: a troca de `SecureStore` (arquivo) por um repositório baseado
-em banco de dados, ou a exposição dos `*Service` existentes por uma API HTTP,
-não deve exigir mudanças nas regras de negócio (`validators/`, `models/`,
-`factories/`), que permanecem os mesmos independentemente da camada de
-persistência ou de apresentação.
